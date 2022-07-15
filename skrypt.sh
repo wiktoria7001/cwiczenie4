@@ -30,3 +30,19 @@ fi
 if [ "$1" == --help ] || [ "$1" == -h ]; then
   help
 fi
+
+if [ "$2" == "30" ] && [ "$1" == --error ]; then
+  for k in `seq -w 1 30`
+  do
+    mkdir error$k
+    touch error$k.txt
+    cd ..
+  done
+fi
+
+if [ "$@" == --error ]; then
+  for l in `seq -w 1 100`
+  do
+    touch error$l.txt
+  done
+fi
