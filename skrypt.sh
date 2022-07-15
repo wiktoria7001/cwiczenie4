@@ -20,3 +20,7 @@ if [ "$2" == "30" ] && [ "$1" == --logs ]; then
     date >> "log$j.txt"
   done
 fi
+
+if [ "$1" == --help]; then
+  help
+fi
