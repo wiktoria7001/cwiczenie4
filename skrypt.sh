@@ -3,7 +3,7 @@ if [ "$1" == --date ]; then
   date
 fi
 
-if [ "$@" == "--logs" ]; then
+if [ "$@" == "--logs" ] || [ "$1" == -l ]; then
   for i in `seq -w 1 100`
     do
     echo "log$i.txt" > "log$i.txt"
