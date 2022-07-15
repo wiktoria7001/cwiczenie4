@@ -11,3 +11,12 @@ if [ "$@" == "--logs" ]; then
     date >> "log$i.txt"
   done
 fi
+
+if [ "$2" == "30" ] && [ "$1" == --logs ]; then
+  for j in `seq -w 1 30`
+    do
+    echo "log$j.txt" > "log$j.txt"
+    echo "$0" >> "log$j.txt"
+    date >> "log$j.txt"
+  done
+fi
