@@ -6,9 +6,12 @@ fi
 if [ "$@" == "--logs" ] || [ "$1" == -l ]; then
   for i in `seq -w 1 100`
     do
-    echo "log$i.txt" > "log$i.txt"
-    echo "$0" >> "log$i.txt"
-    date >> "log$i.txt"
+    mkdir log$i
+    cd log$i
+    echo "log$i.txt" > "log$i/log$i.txt"
+    echo "$0" >> "log$i/log$i.txt"
+    date >> "log$i/log$i.txt"
+    cd ..
   done
 fi
 
