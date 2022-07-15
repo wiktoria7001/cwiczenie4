@@ -24,3 +24,4 @@ fi
 if [ "$1" == --help ] || [ "$1" == -h ]; then
   help
 fi
+#no merge
