@@ -21,6 +21,6 @@ if [ "$2" == "30" ] && [ "$1" == --logs ]; then
   done
 fi
 
-if [ "$1" == --help]; then
+if [ "$1" == --help ] || [ "$1" == -h ]; then
   help
 fi
